@@ -16,6 +16,10 @@
   "files": [
     "lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcotoniut/react-hooke.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -30,5 +34,8 @@
   },
   "peerDependencies": {
     "react": "^16.8"
+  },
+  "bugs": {
+    "url": "https://github.com/marcotoniut/react-hooke/issues"
   }
 }

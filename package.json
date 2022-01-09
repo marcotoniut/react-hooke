@@ -12,12 +12,16 @@
     "hooks",
     "rxjs"
   ],
+  "homepage": "https://github.com/marcotoniut/react-hooke#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcotoniut/react-hooke.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/marcotoniut/react-hooke/issues"
   },
   "devDependencies": {
     "jest": "^27.4.5",

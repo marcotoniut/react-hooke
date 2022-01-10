@@ -1,6 +1,6 @@
 {
   "name": "@react-hooke/rxjs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Manage react state as observed by rxjs structures",
   "keywords": [
     "react",

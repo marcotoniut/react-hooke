@@ -32,7 +32,11 @@
     "prebuild": "yarn clean",
     "test": "jest"
   },
+  "devDependencies": {
+    "@types/react": "^16.8"
+  },
   "peerDependencies": {
+    "react": "^16.8",
     "rxjs": "^5.0.0"
   },
   "bugs": {

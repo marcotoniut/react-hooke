@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { BehaviorSubject } from "rxjs";
 
 /**
  * @param $ A rxjs `Behavior` that sets a new state with whatever comes through the stream pipeline.

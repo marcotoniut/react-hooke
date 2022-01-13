@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import type { Observable } from "rxjs";
-import type { PartialObserver } from "rxjs/Observer";
+import type { Observable, PartialObserver } from "rxjs";
 
 /**
  * @experimental

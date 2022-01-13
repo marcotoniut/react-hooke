@@ -9,7 +9,7 @@
     "frp",
     "reactive"
   ],
-  "author": "Marco Toniut <marco.toniut@gmail.com>",
+  "author": "Marco Toniut",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs";
 
 function constVoid() {}
 

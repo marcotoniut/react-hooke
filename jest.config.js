@@ -1,6 +1,11 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
   testEnvironment: "node",
+  globals: {
+    "ts-jest": {
+      tsconfig: "./packages/tsconfig.test.settings.json",
+    },
+  },
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },

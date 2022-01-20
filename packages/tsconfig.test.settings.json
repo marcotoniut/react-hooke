@@ -4,7 +4,8 @@
     "module": "commonjs",
     "strict": true,
     "declaration": true,
-    "types": ["jest"]
+    "esModuleInterop": true,
+    "types": ["jest"],
   },
   "exclude": ["node_modules"]
 }

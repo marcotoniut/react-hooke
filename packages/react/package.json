@@ -30,10 +30,10 @@
     "test": "jest --config ../../jest.config.js"
   },
   "devDependencies": {
-    "@types/react": "^16.8"
+    "@types/react": ">=16.8"
   },
   "peerDependencies": {
-    "react": "^16.8"
+    "react": ">=16.8"
   },
   "bugs": {
     "url": "https://github.com/marcotoniut/react-hooke/issues"

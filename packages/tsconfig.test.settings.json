@@ -4,7 +4,7 @@
     "module": "commonjs",
     "strict": true,
     "declaration": true,
-    "typeRoots": ["node_modules/@types"]
+    "types": ["jest"]
   },
   "exclude": ["node_modules"]
 }

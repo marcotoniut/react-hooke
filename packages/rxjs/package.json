@@ -30,7 +30,7 @@
     "build": "tsc",
     "clean": "rimraf ./lib",
     "prebuild": "yarn clean",
-    "test": "jest"
+    "test": "jest --config ../../jest.config.js"
   },
   "devDependencies": {
     "@types/react": "^16.8"

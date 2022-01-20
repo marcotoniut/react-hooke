@@ -1,6 +1,6 @@
 {
   "name": "@react-hooke/react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Basic hook primitives to complement the base library",
   "keywords": [
     "react",

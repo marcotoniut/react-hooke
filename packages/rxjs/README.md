@@ -7,26 +7,28 @@
 #### Usage
 
 ```tsx
-import { useConst, useDependent } from "@react-hooke/react";
 import { useObservableState } from "@react-hooke/rxjs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Subject } from "rxjs";
 import * as RX from "rxjs/operators";
 
 function C(): JSX.Element {
-  const $ = useConst(() => new Subject());
+  const [streams] = useState(() => {
+    const trigger$ = new Subject();
+    const count$ = trigger$.pipe(RX.reduce((acc) => acc + 1, 0));
+    return {
+      count$,
+      trigger$,
+    };
+  });
 
   useEffect(() => {
-    setInterval(() => $.next(), 1000);
-  }, [$]);
+    setInterval(() => streams.trigger$.next(), 1000);
+  }, [streams.trigger$]);
 
-  const counter$ = useDependent(
-    () => $.pipe(RX.reduce((acc) => acc + 1, 0)),
-    [$]
-  );
-  const counter = useObservableState(counter$, () => 0);
+  const count = useObservableState(streams.count$, () => 0);
 
-  return <>{counter}</>;
+  return <>{count}</>;
 }
 ```
 
@@ -58,19 +60,18 @@ function C({
 #### Usage
 
 ```tsx
-import { useConst } from "@react-hooke/react";
 import { useBehaviorState } from "@react-hooke/rxjs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BehaviorSubject } from "rxjs";
 
 function C(): JSX.Element {
-  const counter$ = useConst(() => new BehaviorSubject<number>(0));
-  const counter = useBehaviorState(counter$);
+  const [count$] = useState(() => new BehaviorSubject<number>(0));
+  const count = useBehaviorState(count$);
 
   useEffect(() => {
-    setInterval(() => counter$.next(counter$.value + 1), 1000);
-  }, [counter$]);
+    setInterval(() => count$.next(count$.value + 1), 1000);
+  }, [count$]);
 
-  return <>{counter}</>;
+  return <>{count}</>;
 }
 ```

@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Observable } from "rxjs";
 
-function constVoid() {}
+function constVoid() {
+  return;
+}
 
 /**
  * @param {Observable<S>} $ An rxjs `Observable` that sets a new state with whatever comes through the stream pipeline.

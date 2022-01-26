@@ -75,7 +75,6 @@ test("emitted error triggers an `error` effect", () => {
     const [x, setX] = useState<number>(0);
 
     useSubscriptionEffect($, {
-      next: () => {},
       error: setX,
     });
 
@@ -98,8 +97,6 @@ test("emitted complete triggers a `complete` effect", () => {
     const [x, setX] = useState<number>(0);
 
     useSubscriptionEffect($, {
-      next: () => {},
-      error: () => {},
       complete: () => setX(1),
     });
 

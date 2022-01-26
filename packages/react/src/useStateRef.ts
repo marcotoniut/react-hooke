@@ -8,12 +8,12 @@ import { Dispatch, RefObject, useRef, useState } from "react";
  */
 export function useStateRef<T>(
   def: T
-): [Readonly<RefObject<T>>, Dispatch<T>, T] {
+): readonly [Readonly<RefObject<T>>, Dispatch<T>, T] {
   const ref = useRef(def);
   const [x, setX] = useState(def);
-  function setRef(x: T) {
-    ref.current = x;
-    setX(x);
+  function setRef(y: T) {
+    ref.current = y;
+    setX(y);
   }
   return [ref, setRef, x];
 }

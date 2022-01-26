@@ -12,7 +12,10 @@ export function useDependent<S>(
   create: () => S,
   deps: ReadonlyArray<unknown>
 ): S {
-  const ref = useRef<{ prevDeps: ReadonlyArray<unknown> | null; x: S }>();
+  const ref = useRef<{
+    readonly prevDeps: ReadonlyArray<unknown> | null;
+    readonly x: S;
+  }>();
   if (
     ref.current === undefined ||
     areHookInputsEqual(deps, ref.current.prevDeps) === false
